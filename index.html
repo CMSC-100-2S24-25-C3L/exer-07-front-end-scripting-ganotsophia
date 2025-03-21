@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Rank App</title>
+    <script src="./form.js"></script>
+</head>
+<body>
+    <h1>Food Rank App</h1>
+
+    <form id="foodForm">
+        <label>Food Name: <input type="text" id="foodName" required></label><br>
+        <label>Description: <input type="text" id="foodDesc" required></label><br>
+        <label>Image URL: <input type="text" id="foodImg" required></label><br>
+        <label>Rank: <input type="number" id="foodRank" required></label><br>
+        <button type="submit">Add Food</button>
+    </form>
+
+    <h2>Food List</h2>
+    <div id="foodList"></div>
+</body>
+</html>

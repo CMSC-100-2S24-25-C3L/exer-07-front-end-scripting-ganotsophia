@@ -1,14 +1,15 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+import express from 'express';
+import path from 'path';
 
-app.use(express.static(__dirname)); // Serve files from the same folder
+const app = express();
+
+// Serve static files from the "static files" folder
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.resolve('static files/index.html'));
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(3000, () => {
+    console.log('Server started at 3000');
 });
